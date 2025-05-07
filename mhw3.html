@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Sito ufficiale FC Inter Milano - Notizie, albo d'oro e store ufficiale">
+    <title>Sito Inter</title>
+    <link rel="stylesheet" href="mhw3.css">
+    <script src="mhw3.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <button class="search-btn-mobile">🔍</button>
+        <div class="search-bar-mobile hidden">
+            <input type="text" placeholder="Cerca...">
+            <button class="close-search">✕</button>
+        </div>
+        <!-- Menu laterale per versione mobile -->
+        <button class="sidebar-open">☰</button>
+        <nav class="mobile-sidebar hidden">
+            <button class="sidebar-close">✕</button>
+            <ul>
+                <li><a href="#">Notizie</a></li>
+                <li><a href="#">Stagione</a></li>
+                <li><a href="#">Società</a></li>
+                <li><a href="#">Inter TV</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Biglietti</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <div class="header-left">
+            <a href="#">Notizie</a>
+            <a href="#">Stagione</a>
+            <a href="#">Società</a>
+            <a href="#">Inter TV</a>
+        </div>
+        <div class="header-center">
+            <a href="mhw3.html"><img src="FC_Internazionale_Milano_2021.svg.png" ></a>
+        </div>
+        <div class="header-right">
+            <a href="#">Store</a>
+            <a href="#">Biglietti</a>
+            <a href="#">Login</a>
+            <button class="search-icon">🔍</button>
+        </div>
+        <div class="search-bar-desktop hidden">
+            <input type="text" placeholder="Cerca...">
+            <button class="close-search-desktop">✕</button>
+        </div>
+    </header>
+    <section class="notizie">
+        <h2>Ultime Notizie</h2>
+        <div class="notizie-container">
+            <div class="notizia">
+                <img src="news1.jpeg" alt="Inter scudetto">
+                <p>Inter vince il suo 20° scudetto</p>
+            </div>
+            <div class="notizia">
+                <img src="news2.jpeg" alt="Lautaro Martinez">
+                <p>Lautaro Martinez protagonista in Champions League.</p>
+            </div>
+            <div class="notizia">
+                <img src="news3.jpeg" alt="Thuram MVP">
+                <p>Thuram mvp del mese di settembre</p>
+            </div>
+            <div class="notizia">
+                <img src="news4.jpeg" alt="Inter Champions">
+                <p>Inter avanza in Champions League!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="partite">
+        <h2>Prossime Partite</h2>
+        <div class="partite-container">
+            <div class="partita partita-blu">
+                <p class="data">12 Apr 2025 - 18:00</p>
+                <div class="squadre">
+                    <span>Inter</span>
+                    <span>vs</span>
+                    <span>Cagliari</span>
+                </div>
+                <p class="stadio">San Siro, Milano</p>
+                <img src="scudetto.png" alt="Serie A">
+            </div>
+            <div class="partita">
+                <p class="data">16  Apr 2025 - 21:00</p>
+                <div class="squadre">
+                    <span>Inter</span>
+                    <span>vs</span>
+                    <span>Bayern</span>
+                </div>
+                <p class="stadio">San Siro, Milano</p>
+                <img src="champions.png" alt="Champions League">
+            </div>
+            <div class="partita">
+                <p class="data">20 Apr 2025 - 18:00</p>
+                <div class="squadre">
+                    <span>Bologna</span>
+                    <span>vs</span>
+                    <span>Inter</span>
+                </div>
+                <p class="stadio">Renato Dall'Ara,Bologna</p>
+                <img src="scudetto.png" alt="Serie A">
+            </div>
+            <div class="partita">
+                <p class="data">23 Apr 2025 - 21:00</p>
+                <div class="squadre">
+                    <span>Inter</span>
+                    <span>vs</span>
+                    <span>Milan</span>
+                </div>
+                <p class="stadio">San Siro, Milano</p>
+                <img src="coppa.png" alt="Coppa Italia">
+            </div>
+        </div>
+        <button id="mostra-altre-partite">Mostra altre partite</button>
+    </section>
+
+    <section class="shop">
+        <h2>Store</h2>
+        <div class="shop-container">
+            <!-- Maglietta 1 -->
+            <div class="prodotto">
+                <img src="maglietta1.jpeg" alt="Maglietta Inter Home">
+                <h3>Maglietta Inter Home</h3>
+                <p>€152,99</p>
+                <button>Acquista</button>
+            </div>
+
+            <div class="prodotto">
+                <img src="maglietta2.webp" alt="Maglietta Inter Away">
+                <h3>Maglietta Inter Away</h3>
+                <p>€152,99</p>
+                <button>Acquista</button>
+            </div>
+
+            <div class="prodotto">
+                <img src="maglietta3.jpeg" alt="Maglietta Inter Third">
+                <h3>Maglietta Inter Third</h3>
+                <p>€152,99</p>
+                <button>Acquista</button>
+            </div>
+
+            <div class="prodotto">
+                <img src="cappellino.jpeg" alt="Cappellino Inter">
+                <h3>Cappellino Inter</h3>
+                <p>€24,99</p>
+                <button>Acquista</button>
+            </div>
+        </div>
+        <button class="hidden mostra-pulsante">Mostra Albo</button>
+    </section>
+
+    <section class="albo">
+        <button class="nascondi-pulsante">Nascondi</button>
+        <h2>Albo d'Oro</h2>
+        <div class="albo-container">
+            
+            <div class="trofeo scudetto">
+                <img src="scudetto.png" alt="Scudetto">
+                <h3>Scudetti</h3>
+                <ul>
+                    <li>20</li>
+                </ul>
+            </div>
+
+            <div class="trofeo champions">
+                <img src="champions.png" alt="Champions League">
+                <h3>Champions League</h3>
+                <ul>
+                    <li>3</li>
+                </ul>
+            </div>
+
+            <div class="trofeo coppa">
+                <img src="coppa.png" alt="Coppa Italia">
+                <h3>Coppa Italia</h3>
+                <ul>
+                    <li>9</li>
+                </ul>
+            </div>
+
+            <div class="trofeo supercoppa">
+                <img src="supercoppa.png" >
+                <h3>Supercoppa Italiana</h3>
+                <ul>
+                    <li>8</li>
+                </ul>
+            </div>
+
+            <div class="trofeo europa-league">
+                <img src="europa-league.png" >
+                <h3>Europa League</h3>
+                <ul>
+                    <li>3</li>
+                </ul>
+            </div>
+
+            <div class="trofeo mondiale">
+                <img src="mondiale.png" >
+                <h3>Mondiale per Club</h3>
+                <ul>
+                    <li>1</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Sito realizzato da Michele Salafrica</p>
+    </footer>
+</body>
+</html>

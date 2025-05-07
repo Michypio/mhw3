@@ -1,0 +1,1233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    color: white; /* aggiunto per far diventare le scritte in bianco */
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: darkblue; 
+    color: white;
+    width: 100%;
+    padding: 30px 30px;
+    height: 600px;
+    background-image: url('sfondo.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.header-left {
+    display: flex;
+    gap: 40px;
+}
+
+.header-left a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.header-left a:hover {
+    text-decoration: underline;
+}
+
+.header-center {
+    flex-grow: 1;
+    text-align: center;
+}
+.header img{
+    width: 100px;
+    height: auto;
+}
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.header-right {
+    display: flex;
+    gap: 40px;
+}
+
+.header-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.header-right a:hover {
+    text-decoration: underline;
+}
+
+.search-icon {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Nascondi il pulsante di ricerca mobile di default */
+.search-btn-mobile {
+    display: none;
+}
+
+.search-bar-desktop {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.search-bar-desktop.hidden {
+    display: none;
+}
+
+.search-bar-desktop input {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.search-bar-desktop .close-search-desktop {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.notizie {
+    background-color: black;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.notizie h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.notizie-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.notizia {
+    flex: 0 0 auto;
+    width: 250px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.notizia img {
+    width: 100%;
+    height: 180px;  /* Altezza standardizzata */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.notizia p {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.shop {
+    background-color: black;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.shop h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.shop-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.prodotto {
+    flex: 0 0 auto;
+    width: 250px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.prodotto img {
+    width: 100%;
+    height: 180px;  /* Altezza standardizzata */
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.prodotto h3 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.prodotto p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.prodotto button {
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.prodotto button:hover {
+    background-color: black;
+}
+
+.albo {
+    background-color:darkblue;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.albo h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.albo-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+    flex-wrap: nowrap;
+}
+
+.trofeo {
+    text-align: center;
+    padding: 20px;
+}
+
+.trofeo img {
+    width: 100px;
+    height: 120px;  /* Altezza standardizzata */
+    margin-bottom: 10px;
+    object-fit: contain; 
+}
+
+.trofeo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.trofeo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.trofeo ul li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.nascondi-pulsante {
+    background-color: white;
+    border-color: black;
+    border-width: 2px;
+    color: blue;
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+}
+
+.mostra-pulsante {
+    background-color: white;
+    border-color: black;
+    border-width: 2px;
+    color: blue;
+    padding: 10px;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+.messaggio-acquisto {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.partite {
+    background-color: black;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.partite h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.partite-container {
+    display: flex;
+    justify-content: flex-start; 
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+    gap: 30px;
+}
+
+.partite-container.show-all {
+    justify-content: flex-start;
+    max-width: none;
+    overflow-x: auto;  
+}
+
+.partite-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.nav-arrow {
+    display: none;
+}
+
+.nav-arrow.prev,
+.nav-arrow.next {
+    display: none;
+}
+
+.partita {
+    flex: 0 0 220px;
+    margin: 0 10px;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.partita-blu {
+    background-color: darkblue;
+}
+
+.partita .data {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.partita .squadre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.partita .stadio {
+    font-size: 0.9rem;
+    color: #ccc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: block;
+}
+
+.partita .stadio-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.partita img {
+    width: 50px;
+    height: 50px;  /* Già standardizzata */
+    object-fit: contain;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+#mostra-altre-partite {
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+#mostra-altre-partite:hover {
+    background-color: #000066;
+}
+
+#torna-indietro {
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+#torna-indietro:hover {
+    background-color: #000066;
+}
+
+.altre-partite {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.partite-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 40px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.partite-container::-webkit-scrollbar {
+    display: none;
+}
+
+.rosa {
+    background-color: black;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.rosa h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.rosa-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 40px;
+    margin: 0 auto;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+
+.rosa-container::-webkit-scrollbar {
+    display: none;
+}
+
+.giocatore-card {
+    flex: 0 0 250px;  
+    min-width: 250px; 
+    position: relative;
+    width: 100%;
+    background-color: black;  
+    border-radius: 10px;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.3s;
+    margin: 0 auto;
+    opacity: 1;  
+    display: block;  
+}
+
+.giocatore-card:hover {
+    transform: translateY(-5px);
+}
+
+.giocatore-card.visible {
+    opacity: 1;
+    display: block;
+}
+
+.giocatore-card.hidden {
+    opacity: 0;
+    display: none;
+}
+
+.giocatore-card img {
+    width: 85%;  
+    height: 280px;  /* Già standardizzata */
+    object-fit: cover;
+    object-position: top center;  /* Migliorato posizionamento */
+    display: block;
+    margin: 0 auto;  
+}  
+
+.giocatore-card .info {
+    padding: 10px;
+    background-color: black;
+    text-align: center;
+}
+
+.giocatore-card h3 {
+    margin: 5px 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.giocatore-card .numero {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: darkblue;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.giocatore-card .header-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.giocatore-card .nome {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.giocatore-card .cognome {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.giocatore-card .ruolo {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.giocatore-card.allenatore-card {
+    background-color: darkblue;
+}
+
+.giocatore-card.allenatore-card .header-info {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.giocatore-card.ruolo-allenatore {
+    display: none;  /* Nascondi di default */
+}
+
+.giocatore-card.ruolo-allenatore img {
+    display: block;
+    width: 85%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center 10%;
+    margin: 0 auto;
+}
+
+.giocatore-card.hidden {
+    display: none;
+}
+
+.giocatore-card.italia {
+    border-left: 4px solid #0077b6;
+}
+
+.giocatore-card.attaccante {
+    border-top: 4px solid #dc2f02;
+}
+
+.giocatore-card.centrocampista {
+    border-top: 4px solid #2a9d8f;
+}
+
+.giocatore-card.difensore {
+    border-top: 4px solid #ffba08;
+}
+
+.giocatore-card.portiere {
+    border-top: 4px solid #8338ec;
+}
+
+.giocatore-card.allenatore {
+    border-top: 4px solid #023047;
+}
+
+.filtri-ruolo {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filtro-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid darkblue;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.filtro-btn:hover,
+.filtro-btn.active {
+    background-color: darkblue;
+    color: white;
+}
+
+.filtro-btn.ruolo-allenatore {
+    background-color: darkblue;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    /* Rimuovo tutti gli !important e uso selettori più specifici */
+    .header .header-left, 
+    .header .header-right {
+        display: none;
+    }
+    
+    /* Aggiungo una classe per nascondere elementi in modo più specifico */
+    .hidden-mobile {
+        display: none;
+    }
+
+    .header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 400px;
+        padding: 20px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Forzo la visibilità del menu mobile usando selettori più specifici */
+    .header .mobile-sidebar ul,
+    .header .sidebar-open {
+        display: block;
+    }
+
+    .header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 400px;
+        padding: 20px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .header-center {
+        position: absolute;
+        left: 20px;  /* Allinea con il padding del header */
+        top: 20px;
+        transform: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .header img {
+        top: -100px;;
+        position: relative;
+        width: 70px;
+        height: auto;
+    }
+
+    .sidebar-open {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 2rem;
+        color: white;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        z-index: 1000;
+    }
+
+    /* Rimuoviamo il display: none dal menu mobile e dal pulsante */
+    .mobile-sidebar ul,
+    .sidebar-open {
+        display: block;
+    }
+
+    .header {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 400px;
+        padding: 30px 0 0 0;  /* Aggiunto padding-top */
+        background-size: cover;
+        background-position: center;
+    }
+
+    .header-center {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        padding: 0;
+    }
+    
+    .header img {
+        width: 100px;
+        height: auto;
+    }
+
+    .header-left, .header-right {
+        display: flex; 
+    }
+
+    .header-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+    
+    .header img {
+        width: 70px;
+    }
+
+    .notizie-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .notizia {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+    
+    .shop-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .prodotto {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .prodotto img {
+        width: 100%;
+        height: auto;
+        max-height: 180px;
+        object-fit: contain;
+    }
+
+    .albo-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        padding: 0 15px;
+    }
+
+    .trofeo {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 10px;
+    }
+    
+    .trofeo img {
+        width: 70px;
+        height: 100px;  /* Altezza standardizzata per mobile */
+        object-fit: contain;
+    }
+    
+    .trofeo h3 {
+        font-size: 1.2rem;
+    }
+
+    .partite-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .partite-container.show-all {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .notizie-container,
+    .shop-container,
+    .albo-container {
+        overflow: hidden;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+        padding: 0 10px;
+        margin: 0;
+    }
+
+    .partite-container.show-all {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 0 10px;
+    }
+
+    section {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .partita {
+        width: 100%;
+    }
+
+    .rosa-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .filtri-ruolo {
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+    
+    .filtro-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    /* Stili per menu laterale mobile aggiornati per posizionarlo a destra */
+    .sidebar-open {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        position: absolute;
+        top: 20px;
+        right: 20px; /* Cambiato da left a right */
+        z-index: 1000;
+    }
+    .mobile-sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;  /* occupa tutta la larghezza */
+        height: 100%;
+        background-color: darkblue;
+        color: white;
+        padding: 20px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+        overflow-x: hidden;  /* elimina lo scroll orizzontale */
+        overflow-y: hidden;  /* elimina lo scroll verticale */
+    }
+    .mobile-sidebar.active {
+        transform: translateX(0);
+    }
+    /* Rende bianche le scritte nel menu laterale */
+    .mobile-sidebar a {
+         color: white;
+         text-decoration: none;
+    }
+    /* Rende i link nel menu mobile a tutta larghezza */
+    .mobile-sidebar a {
+         display: block;
+         width: 100%;
+         text-align: center;
+    }
+    /* Rimuove i puntini dal menu laterale */
+    .mobile-sidebar ul {
+         list-style: none;
+         margin: 0;
+         padding: 0;
+    }
+    /* Rende gli elementi <li> del menu a tutta larghezza */
+    .mobile-sidebar li {
+         width: 100%;
+    }
+    /* Rende i link del menu mobile più grandi per occupare l'intera larghezza */
+    .mobile-sidebar a {
+         display: block;
+         width: 100%;
+         text-align: center;
+         font-size: 3rem;  /* aumentato per far occupare tutta la lunghezza disponibile */
+         margin-bottom: 1.5rem;  /* nuovo: distacco tra le scritte */
+    }
+    /* Centra il logo */
+    .header-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .search-btn-mobile {
+        display: block; /* Mostra solo in mobile */
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        font-size: 1.5rem;
+        color: white;
+        background: none;
+        border: none;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .search-bar-mobile {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: darkblue;
+        display: flex;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+
+    .search-bar-mobile.active {
+        transform: translateY(0);
+    }
+
+    .search-bar-mobile input {
+        flex: 1;
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        margin-right: 10px;
+        font-size: 1rem;
+    }
+
+    .search-bar-mobile .close-search {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .sidebar-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        color: white;
+        background: none;
+        border: none;
+        z-index: 1001; /* Aumentato per essere sopra la lente */
+        cursor: pointer;
+    }
+
+    .search-btn-mobile {
+        z-index: 999; /* Abbassato per essere sotto la X */
+    }
+
+    .mobile-sidebar {
+        z-index: 1000; /* Valore intermedio tra search button e close button */
+    }
+
+    /* Nascondi la lente desktop in mobile */
+    .search-icon {
+        display: none;
+    }
+
+    .notizia img, .prodotto img {
+        height: 160px;  /* Altezza standardizzata per mobile */
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        height: 350px;
+    }
+    
+    .header-left, .header-right {
+        gap: 8px;
+    }
+    
+    .header-left a, .header-right a {
+        font-size: 0.85rem;
+        padding: 4px 6px;
+    }
+    
+    .notizie-container, .shop-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .albo-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .notizie h2, .shop h2, .albo h2 {
+        font-size: 1.7rem;
+    }
+
+    .prodotto img {
+        max-height: 160px;
+    }
+
+    .partite-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .partita {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+        height: 300px;
+    }
+
+    .header-left a, .header-right a {
+        font-size: 0.8rem;
+        padding: 3px 5px;
+    }
+    
+    .header img {
+        width: 60px;
+    }
+
+    .notizie h2, .shop h2, .albo h2 {
+        font-size: 1.5rem;
+    }
+
+    .albo-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .trofeo {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        padding: 10px 20px;
+    }
+    
+    .trofeo img {
+        width: 60px;
+        height: 80px;  /* Altezza standardizzata per mobile più piccoli */
+        margin-right: 20px;
+        margin-bottom: 0;
+        object-fit: contain;
+    }
+    
+    .prodotto {
+        padding: 12px;
+    }
+
+    .prodotto img {
+        max-height: 140px;
+    }
+    
+    .prodotto h3 {
+        font-size: 1.1rem;
+    }
+    
+    .prodotto p {
+        font-size: 1rem;
+    }
+    
+    .prodotto button {
+        padding: 8px 12px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 15px;
+    }
+
+    .notizia img, .prodotto img {
+        height: 140px;  /* Altezza standardizzata per mobile più piccoli */
+    }
+}
+
+@media (max-width: 350px) {
+    .header {
+        height: 250px;
+    }
+    
+    .header-left, .header-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .header-left a, .header-right a {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .notizia p, .trofeo h3 {
+        font-size: 0.9rem;
+    }
+    
+    .trofeo img {
+        width: 50px;
+        height: 70px;  /* Altezza standardizzata per mobile molto piccoli */
+        object-fit: contain;
+    }
+
+    .prodotto img {
+        max-height: 120px;
+    }
+
+    .notizia img, .prodotto img {
+        height: 120px;  /* Altezza standardizzata per mobile molto piccoli */
+    }
+}
+
+/* Stili per le quote */
+.quote-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.quote span:first-child {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.quote span:last-child {
+    color: #ffd700;
+    font-size: 1.1em;
+}
+
+@media (min-width: 769px) {
+    .header:hover {
+        background-image: url('vittoria.webp');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .header:hover .header-left a,
+    .header:hover .header-right a {
+        color: black;
+    }
+
+    /* Nascondi il menu mobile solo su desktop */
+    .sidebar-open,
+    .mobile-sidebar {
+         display: none;
+    }
+}
+
